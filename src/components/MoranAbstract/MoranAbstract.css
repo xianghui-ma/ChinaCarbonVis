@@ -1,0 +1,28 @@
+.moranAbstract{
+    grid-column: 9 / 22;
+    grid-row: 13 / 21;
+    position: relative;
+    display: flex;
+}
+.moranAbstract .title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8em;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+.moranAbstract .areaChange{
+    flex-basis: 90%;
+    height: 100%;
+}
+.moranAbstract .cityList{
+    flex-basis: 10%;
+    height: 100%;
+    background-color: #ccc;
+}

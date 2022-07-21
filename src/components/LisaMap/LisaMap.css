@@ -1,0 +1,16 @@
+.LisaMapBox{
+    grid-column: 5 / 16;
+    grid-row: 1 / 13;
+    display: flex;
+    flex-direction: column;
+}
+.LisaMapBox .title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5em;
+    background-color: #eee;
+}
+.LisaMapBox .lisaMap{
+    flex-grow: 1;
+}

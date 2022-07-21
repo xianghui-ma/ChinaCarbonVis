@@ -1,0 +1,7 @@
+.mapBox{
+    grid-column: 15 / 22;
+    grid-row: 1 / 13;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}

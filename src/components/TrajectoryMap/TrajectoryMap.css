@@ -1,0 +1,24 @@
+.trajectoryMap{
+    grid-column: 1 / 8;
+    grid-row: 13 / 21;
+    position: relative;
+}
+.trajectoryMap .title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9em;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+.nodeContainer{
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+}

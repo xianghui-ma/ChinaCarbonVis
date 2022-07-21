@@ -1,0 +1,18 @@
+.similarityMatrix{
+    grid-column: 18 / 22;
+    grid-row: 7 / 13;
+    position: relative;
+}
+/* .similarityMatrix .title{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9em;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5em;
+    border-bottom-left-radius: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+} */

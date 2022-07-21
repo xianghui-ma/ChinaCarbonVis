@@ -1,0 +1,39 @@
+.map{
+    grid-column: 1 / 9;
+    grid-row: 2 / 16;
+    position: relative;
+}
+.map .title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6em;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+.map .city{
+    border-bottom: 1px solid #000;
+    text-align: center;
+    margin: 0;
+}
+.map .mes{
+    margin-bottom: 1px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 2px;
+}
+.map .lisaMap{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    height: 50%;
+    /* background-color: rgba(255, 255, 255, 0.466); */
+    background-color: transparent;
+    z-index: 1000;
+}

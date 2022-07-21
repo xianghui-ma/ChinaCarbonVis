@@ -1,0 +1,17 @@
+.moranDetail{
+    grid-column: 18 / 22;
+    grid-row: 1 / 13;
+    position: relative;
+}
+.moranDetail .title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9em;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+}

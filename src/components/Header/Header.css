@@ -1,0 +1,8 @@
+.header{
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    background-color: #eee;
+}

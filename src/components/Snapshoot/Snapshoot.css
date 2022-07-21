@@ -1,0 +1,49 @@
+.snapshootBox{
+    grid-column: 1 / 5;
+    grid-row: 1 / 14;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.snapshootBox .title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5em;
+    background-color: #eee;
+}
+.snapshootBox .snapshoot{
+    flex-grow: 1;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.snapshootBox .snapshoot::-webkit-scrollbar{
+    width: 0 !important;
+}
+.snapshootBox .snapshoot .snapshootItem{
+    width: 90%;
+    height: 40%;
+    margin: 5%;
+    position: relative;
+    box-sizing: content-box;
+    border: 0.1em solid #999;
+    border-radius: 0em 0.5em 0.5em 0.5em;
+}
+.snapshootBox .snapshoot .snapshootItem input{
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+}
+.snapshootBox .snapshoot .snapshootItem .yearMark{
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: #999;
+    font-weight: 800;
+    width: 3em;
+    text-align: center;
+    color: #fff;
+    border-bottom-right-radius: 0.4em;
+}

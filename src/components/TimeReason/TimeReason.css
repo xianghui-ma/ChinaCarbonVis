@@ -1,0 +1,16 @@
+.funCollectionBox #timeReasonContainer{
+    display: flex;
+    flex-direction: column;
+}
+.funCollectionBox #selectedFactor{
+    flex-basis: 70%;
+}
+.funCollectionBox #factorValue{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.funCollectionBox #factorValue .factorValueItem{
+    flex-basis: 9%;
+    border: 1px solid #aaa;
+}

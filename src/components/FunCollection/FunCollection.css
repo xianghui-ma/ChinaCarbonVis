@@ -1,0 +1,37 @@
+.funCollectionBox{
+    grid-column: 5 / 16;
+    grid-row: 13 / 21;
+    display: flex;
+    flex-direction: column;
+}
+.funCollectionBox .ant-tabs-nav{
+    margin-bottom: 0;
+    font-size: 1rem;
+    height: 7%;
+}
+.funCollectionBox .mesPanel{
+    height: 100%;
+}
+.funCollectionBox .title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5em;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+}
+.funCollectionBox .title .tabItem{
+    padding: 0 1em;
+}
+.funCollectionBox .title .selectedTab{
+    background-color: #fff;
+}
+.funCollectionBox .funCollection{
+    flex-grow: 1;
+    overflow: hidden;
+}
+.funCollectionBox #cityFactor{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,16 @@
+.aggregationReasonBox{
+    grid-column: 16 / 22;
+    grid-row: 11 / 21;
+    display: flex;
+    flex-direction: column;
+}
+.aggregationReasonBox .title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.5em;
+    background-color: #eee;
+}
+.aggregationReasonBox .aggregationReason{
+    flex-grow: 1;
+}
