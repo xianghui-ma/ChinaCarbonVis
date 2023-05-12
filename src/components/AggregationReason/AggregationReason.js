@@ -1,6 +1,62 @@
 import * as echarts from 'echarts';
 import axios from 'axios';
 
+export const drawEconomyGraph = async (containerId, dataUrl, chinaUrl)=>{
+    let graph = await axios.get(dataUrl);
+    let china = await axios.get(chinaUrl);
+    const color = {'HH': '#C54E83', 'LL': '#4EBABC', 'HL': '#F4A2B9', 'LH': '#8FC1D9'};
+    graph = graph.data;
+    china = china.data;
+    echarts.registerMap('china', china);
+    let chart = echarts.init(document.getElementById(containerId));
+    chart.setOption({
+        legend: [
+            {
+                selectedMode: 'single',
+                orient: 'vertical',
+                right: 30,
+                bottom: 30,
+                data: graph.categories.map(function (a) {
+                    a.itemStyle = {
+                        color: color[a.name]
+                    }
+                    return a;
+                })
+            }
+        ],
+        tooltip: {},
+        // geo: {
+        //     show: true,
+        //     roam: true,
+        //     map: 'china',
+        //     center: [116.4133837, 39.91092455],
+        //     zoom: 20,
+        //     itemStyle: {
+        //         areaColor: 'transparent',
+        //         borderColor: 'transparent'
+        //     }
+        // },
+        series: [
+            {
+                // coordinateSystem: 'geo',
+                layout: 'force',
+                type: 'graph',
+                data: graph.nodes,
+                links: graph.links,
+                categories: graph.categories,
+                roam: true,
+                label: {
+                    show: true,
+                    position: 'right'
+                },
+                force: {
+                    repulsion: 100
+                }
+            }
+        ]
+    }, true);
+}
+
 export const drawBindGrap = async (containerId, categoriesUrl, aggReasonURL, year)=>{
     const nodeType = ['HH', 'LL', 'HL', 'LH'];
     const color = {'HH': '#C54E83', 'LL': '#4EBABC', 'HL': '#F4A2B9', 'LH': '#8FC1D9'};
@@ -43,7 +99,6 @@ export const drawBindGrap = async (containerId, categoriesUrl, aggReasonURL, yea
             });
         }
     }
-    
     let chart = echarts.init(document.getElementById(containerId));
     chart.setOption({
         legend: [

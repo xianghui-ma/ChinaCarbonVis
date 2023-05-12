@@ -3,6 +3,7 @@
     grid-row: 1 / 13;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .LisaMapBox .title{
     text-align: center;
@@ -13,4 +14,29 @@
 }
 .LisaMapBox .lisaMap{
     flex-grow: 1;
+}
+.LisaMapBox .southchinasea{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+    background-image: url('http://localhost:8080/3.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1000;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+    background: #fff;
+    padding: 10px;
+    border-radius: 2%;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    /* opacity: 0.7; */
 }

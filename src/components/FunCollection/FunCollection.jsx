@@ -21,15 +21,15 @@ export default function FunCollection() {
         <section className='funCollectionBox'>
             <header className='title'>
                 <section>
-                    <NavLink to='/time' className='tabItem' activeClassName='selectedTab'>城市时变</NavLink>
+                    <NavLink to='/time' className='tabItem' activeClassName='selectedTab'>Timely varying curves</NavLink>
                     {/* <NavLink to='/factor' className='tabItem' activeClassName='selectedTab'>城市驱动因素</NavLink> */}
-                    <NavLink to='/timeReason' className='tabItem' activeClassName='selectedTab'>城市时变原因分析</NavLink>
+                    <NavLink to='/timeReason' className='tabItem' activeClassName='selectedTab'>Time-varying reason</NavLink>
                     {/* <NavLink to='/prediction' className='tabItem' activeClassName='selectedTab'>碳排放预测</NavLink> */}
                 </section>
                 <section>
                     <button type="button" className='markCity' id='mark' onClick={()=>{
                         PubSub.publish('markSelectedCity', cities);
-                    }}>标记</button>
+                    }}>Mark</button>
                 </section>
             </header>
             <Switch>

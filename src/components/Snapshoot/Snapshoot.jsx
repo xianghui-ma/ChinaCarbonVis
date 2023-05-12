@@ -11,7 +11,7 @@ export default function Snapshoot() {
 
   return (
     <section className='snapshootBox'>
-        <header className='title'>集群快照</header>
+        <header className='title'>Overview</header>
         <section className='snapshoot'></section>
     </section>
   );

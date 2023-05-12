@@ -5,6 +5,10 @@ import PubSub from 'pubsub-js';
 
 const cluColor = ['#16D6FA', '#979BD9', '#A8F387', '#3ABA8F', '#AF64E8', '#D62424'];
 
+const loadMapChart = async (map)=>{
+    
+}
+
 const drawHeterCluster = (container, num, yName, series)=>{
     let chart = echarts.init(container);
     chart.setOption({
@@ -15,7 +19,7 @@ const drawHeterCluster = (container, num, yName, series)=>{
             top: '10%'
         },
         title: {
-            text: '簇' + (num + 1),
+            text: 'Cluster' + (num + 1),
             right: '7%',
             textStyle: {
                 fontSize: 15,

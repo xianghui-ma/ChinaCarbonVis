@@ -14,8 +14,8 @@ export default function Heterogeneity() {
     }, []);
     return (
         <section className='heterogeneityBox'>
-            <header className='title'>驱动因素异质性</header>
-            <section className='heterogeneity'></section>
+            <header className='title'>Clusters of heterogeneity</header>
+            <section className='heterogeneity' id='circlePack'></section>
         </section>
     );
 }

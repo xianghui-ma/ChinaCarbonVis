@@ -1,6 +1,66 @@
 import * as echarts from 'echarts';
 import axios from 'axios';
 
+export const loadFactorLine = async (containerId, factorsUrl)=>{
+    let factor = await axios.get(factorsUrl);
+    factor = factor.data;
+    let chart = echarts.init(document.getElementById(containerId));
+    const data = [];
+    const cityList = ['fv', 'pv', 'bus', 'pd', 'pgs', 'pcgdp', 'is', 'pcra', 'prsi'];
+    let xAxis = [];
+    let yAxis = [];
+    let grid = [];
+    let series = [];
+    let title = [];
+    cityList.forEach((item, index)=>{
+      xAxis.push({
+          show: false,
+          data: factor['city'],
+          gridIndex: index
+      });
+      yAxis.push({
+          show: false,
+          gridIndex: index
+      });
+      grid.push({
+          left: 5,
+          right: 5,
+          top: index * 10 + '%',
+          bottom: 100 - ((index + 1) * 10) + '%'
+      });
+      series.push({
+        type: 'line',
+        lineStyle: {
+            color: '#C7756B'
+        },
+        areaStyle:{
+            color: '#C7756B'
+        },
+        showSymbol: false,
+        data: factor[item],
+        xAxisIndex: index,
+        yAxisIndex: index
+      });
+      title.push({
+        top: index * 10 + 4 + '%',
+        left: 'left',
+        text: item.toLocaleUpperCase(),
+        textStyle: {
+            fontSize: 14
+        }
+      });
+    });
+    chart.setOption({
+        tooltip: {
+            trigger: 'axis'
+        },
+        title,
+        xAxis,
+        yAxis,
+        grid,
+        series
+    }, true);
+}
 export const loadFactorChange = async (containerId, changeUrl)=>{
     let chart = echarts.init(document.getElementById(containerId));
     const year = [2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017, 2019];
